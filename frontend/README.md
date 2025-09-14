@@ -1,0 +1,16 @@
+# admin-frontend
+
+In order to login to /dashboard, need to use postman manually call the login API http://localhost:3010/admin/admin/login, to get the below data:
+
+{
+    "status": true,
+    "message": "Admin login Successfully.",
+    "data": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGM2NjJmNGQ3NDMyY2Y1ZWEzZjdlMWEiLCJuYW1lIjoiIiwiZW1haWwiOiJqYzJAYWRtaW4uY29tIiwiaW1hZ2UiOiIiLCJwYXNzd29yZCI6IjhiMzJlOWYzNGVjOTEzMTc0M2QwNjZhZDhjNWEwZGIxZWYyZWRhZGZmODNlYjVjZWU0MjRiYTkzMmZjOTBlZTE1MzRiNzYzY2UzYmY3ZjQ1NzZhYzJkMDVmY2U4ZjZkZWIxZTMxNmM4N2Q0NDA3NzQ3ODExZjc2N2ZmNTZmNWM5MDU4OWY3MDkxNTU5ZDczYjQ3NDA2Yzc5YzdkODRkZDBiMjM4NDc4MjJlN2ZkNWNhMWRlMWJmN2RhZmQwMDVlYmQ0NThmYTJjNWEyODk2NzAiLCJpYXQiOjE3NTc4MzM4NDksImV4cCI6MTc1NzgzNzQ0OX0.HpnRDSpOgsbxr6dcLpMfDIWDxAV7O-S7F9kcn7JkuHQ"
+}
+
+Then use below code and paste in browser console
+
+localStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGM2NjJmNGQ3NDMyY2Y1ZWEzZjdlMWEiLCJuYW1lIjoiIiwiZW1haWwiOiJqYzJAYWRtaW4uY29tIiwiaW1hZ2UiOiIiLCJwYXNzd29yZCI6IjhiMzJlOWYzNGVjOTEzMTc0M2QwNjZhZDhjNWEwZGIxZWYyZWRhZGZmODNlYjVjZWU0MjRiYTkzMmZjOTBlZTE1MzRiNzYzY2UzYmY3ZjQ1NzZhYzJkMDVmY2U4ZjZkZWIxZTMxNmM4N2Q0NDA3NzQ3ODExZjc2N2ZmNTZmNWM5MDU4OWY3MDkxNTU5ZDczYjQ3NDA2Yzc5YzdkODRkZDBiMjM4NDc4MjJlN2ZkNWNhMWRlMWJmN2RhZmQwMDVlYmQ0NThmYTJjNWEyODk2NzAiLCJpYXQiOjE3NTc4Mzc1NDUsImV4cCI6MTc1Nzg0MTE0NX0.8q_l4D_69WXtFQqpKm3BA9iE5Z1CufFuLcq-UH53wCE');
+sessionStorage.setItem('isAuth', 'true');
+
+2. Add the values to the variables of the baseURL, secretKey, and projectName same as the defined value in backend .env 
