@@ -34,7 +34,7 @@ const Reaction = () => {
   const [page, setPage] = useState<any>(1);
   const [size, setSize] = useState(20);
 
-  
+
 
   useEffect(() => {
     dispatch(getReaction());
@@ -49,7 +49,7 @@ const Reaction = () => {
   };
 
   const handleDeleteBanner = (row: any) => {
-    
+
     const data = warning();
     data
       .then((res) => {
@@ -88,7 +88,7 @@ const Reaction = () => {
         <ToggleSwitch
           value={row?.isActive}
           onClick={() => {
-            
+
 
             const id: any = row?._id;
             dispatch(activeReaction(id));
@@ -222,30 +222,28 @@ const Reaction = () => {
                               padding: "0px",
                             }}
                              onError={(e)=>{
-                e.currentTarget.src = NoImage.src; 
-              }}
+                              e.currentTarget.src = NoImage.src;
+                            }}
                           />
                         ) : (
                           <img src={item?.image} className="img-gift"  onError={(e)=>{
-                e.currentTarget.src = NoImage.src; 
-              }} />
+                            e.currentTarget.src = NoImage.src;
+                          }} />
                         )}
 
                         {/* <h5 style={{height : "20px" }}>
                             {item?.coin + " " + "Coin"}
                           </h5> */}
                           <ToggleSwitch
-                          style={{position  : "relative" , top: "-117px" , left: "156px"}}
+                            style={{position  : "relative" , top: "-117px" , left: "80px"}}
                             value={item?.isActive}
                             onClick={() => {
-                              
-
                               const id: any = item?._id;
                               dispatch(activeReaction(id));
                             }}
                           />
                         <div className="action-button">
-                          
+
                           <Button
                             btnIcon={<IconEdit className="text-secondary" />}
                             onClick={() => {
@@ -259,7 +257,7 @@ const Reaction = () => {
                             onClick={() => handleDeleteBanner(item)}
                           />
 
-                          
+
                         </div>
                       </div>
                     </div>

@@ -269,7 +269,7 @@ export default function UserProfile(props) {
                       {imagePath ? (
                         <img
                           src={imagePath}
-                           style={{width : "300px" , height : "300px"}}
+                           style={{width : "220px" , height : "220px"}}
                           alt="Profile Avatar"
                           onError={(e) => {
                             e.currentTarget.src = NoImageUser.src;
@@ -278,7 +278,7 @@ export default function UserProfile(props) {
                       ) : (
                         <img
                           src={imagePath}
-                          style={{width : "300px" , height : "300px"}}
+                          style={{width : "220px" , height : "220px"}}
                           onError={(e) => {
                             e.currentTarget.src = NoImageUser.src;
                           }}
@@ -288,7 +288,7 @@ export default function UserProfile(props) {
                   )}
                   {postData?.isFake === false && (
                     <img
-                     style={{width : "300px" , height : "300px"}}
+                     style={{width : "220px" , height : "220px"}}
                       src={imagePath}
                       alt="Profile Avatar"
                       onError={(e) => {

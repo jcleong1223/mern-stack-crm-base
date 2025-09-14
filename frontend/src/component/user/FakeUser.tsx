@@ -74,10 +74,10 @@ const FakeUser = ({ startDate, endDate, multiButtonSelectNavigate }) => {
       setSelectCheckData([]);
     }
   };
-    
+
 
   const paginationSubmitButton = () => {
-    
+
     const selectCheckDataGetId = selectCheckData?.map((item) => item?._id);
     const isActiveData = fakeUserData?.filter((user) => {
       return (
@@ -149,7 +149,7 @@ const FakeUser = ({ startDate, endDate, multiButtonSelectNavigate }) => {
         </span>
       ),
     },
-    
+
     {
       Header: "User",
       body: "name",
@@ -161,7 +161,7 @@ const FakeUser = ({ startDate, endDate, multiButtonSelectNavigate }) => {
         >
           {row?.image && (
             <img src={ row?.image} width="50px" height="50px"  onError={(e)=>{
-                            e.currentTarget.src = NoImage.src; 
+                            e.currentTarget.src = NoImage.src;
                           }} />
           )}
           <span className="text-capitalize ms-3  cursorPointer text-nowrap">

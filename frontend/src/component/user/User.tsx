@@ -16,7 +16,7 @@ import Image from "next/image";
 import Button from "@/extra/Button";
 import dayjs from "dayjs";
 import { IconEye } from "@tabler/icons-react";
-import NoImage from '../../assets/images/user.png';  
+import NoImage from '../../assets/images/user.png';
 const User = (props) => {
   const { startDate, endDate } = props;
   const dispatch = useAppDispatch();
@@ -29,7 +29,7 @@ const User = (props) => {
   const { realUserData, totalRealUser } = useSelector(
     (state: RootStore) => state.user
   );
-  
+
   const router = useRouter();
   useClearSessionStorageOnPopState("multiButton");
 
@@ -90,7 +90,7 @@ const User = (props) => {
   };
 
   const paginationSubmitButton = () => {
-    
+
     const isActiveData = realUserData?.filter((user) => {
       return (
         user.isBlock === false &&
@@ -165,9 +165,9 @@ const User = (props) => {
           className="d-flex align-items-center "
           style={{ cursor: "pointer" }}
           onClick={() => handleEdit(row, "manageUser")}
-        > 
+        >
           <img src={row?.image} width="50px" height="50px" onError={(e)=>{
-                e.currentTarget.src = NoImage.src; 
+                e.currentTarget.src = NoImage.src;
               }} />
           <span className="text-capitalize  ms-3 cursorPointer text-nowrap">
             {row?.name}
@@ -180,7 +180,7 @@ const User = (props) => {
               className="ms-1"
               width={18}
               height={18}
-              
+
             />
           ) : (
             ""
@@ -246,7 +246,6 @@ const User = (props) => {
       body: "Action",
       Cell: ({ row }) => (
         <>
-         
           <div className="action-button">
             <Button
               btnIcon={<IconEye className="text-secondary" />}
